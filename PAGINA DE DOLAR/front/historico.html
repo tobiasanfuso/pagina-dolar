@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="../front/images/ilustracion-signo-dolar.png">
+    <!-- css -->
+    <link rel="stylesheet" href="../front/css/styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <title>dolar UTN</title>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container_nav">
+      <div class="logo">
+        <img src="./images/ilustracion-signo-dolar.png" alt="logo dolar">
+      </div>
+      <div class="menu" id="menu">
+        <a  href="../front/index.html">Home</a>
+        <a class="active" href="../front/historico.html">Histórico</a>
+        <a href="../front/contacto.html">Contacto</a>
+      </div>
+      <div class="hamburguesa" id="hamburguesa" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu_responsive" id="menu_responsive">
+        <a href="../front/index.html">Home</a>
+        <a class="active" href="../front/historico.html">Histórico</a>
+        <a href="../front/contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="formatoprincipal">
+      <div class="principal">
+        <h1>Historico Cotización de monedas</h1>
+        <form id="datosHistorico">
+          <label for="dolar" >Elegi el tipo de dolar:</label>
+          <select id="dolar" name="dolar" required>
+            <option value="oficial">Oficial</option>
+            <option value="blue">Blue</option>
+            <option value="bolsa">Bolsa</option>
+            <option value="contadoconliqui">Contado con liquidacion</option>
+            <option value="cripto">Cripto</option>
+            <option value="mayorista">Mayorista</option>
+            <option value="solidario">Solidario</option>
+            <option value="turista">Turista</option>
+          </select> 
+          
+          <label for="fechainicio" >Fecha:</label>
+          <input type="date" id="fechainicio" name="fechainicio" required>
+
+          <label for="fechafin">Fecha:</label>
+          <input type="date" id="fechafin" name="fechafin" required>
+  
+          <label for="valores">Cantidad de valores:</label>
+          <input type="number" id="valores" name="valores" required>
+  
+          <button type="submit">Armar Grafico</button>
+        </form>
+
+        <button  id="envioHistoricoMostrar">Enviar historico por email</button>
+
+        <form class="formularios" id="enviarHistorico">
+          <label  for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+  
+          <label  for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+  
+          <label  for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <button  type="submit">Enviar</button>
+        </form>
+
+        <h2 class="tituloGrafico">Gráfico de Datos con Chart.js</h2>
+        <canvas id="Grafico" width="400" height="200"></canvas>
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="container_footer">
+      <div class="footer-nombres">
+        <a href="#">Tobias Anfuso</a>
+      </div>
+      <div class="footer-datos">Datos tomados desde dolarapi.com</div>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

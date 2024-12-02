@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- icon -->
+  <link rel="icon" type="image/png" href="../front/images/ilustracion-signo-dolar.png">
+  <!-- css -->
+  <link rel="stylesheet" href="../front/css/styles.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- title -->
+  <title>Cotización del Dólar UTN</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container_nav">
+      <div class="logo">
+        <img src="./images/ilustracion-signo-dolar.png" alt="logo dolar">
+      </div>
+      <div class="menu" id="menu">
+        <a class="active" href="../front/index.html">Home</a>
+        <a href="../front/historico.html">Histórico</a>
+        <a href="../front/contacto.html">Contacto</a>
+      </div>
+      <div class="hamburguesa" id="hamburguesa" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu_responsive" id="menu_responsive">
+        <a class="active" href="../front/index.html">Home</a>
+        <a href="../front/historico.html">Histórico</a>
+        <a href="../front/contacto.html">Contacto</a>
+      </div>
+      <div class="actualización" id="actualizacion">
+        <p>
+          <span id="ultima_actualizacion">Ultima actualizacion : No disponible</span>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    
+    <div class="formatoprincipal">
+      <div class="principal">
+        <h1>Cotización actuales de monedas</h1>
+        <button  id="envioCotizacionesMostrar">Enviar cotizaciones por email</button>
+        <form class="formularios" id="enviarCotizaciones">
+          <label  for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+  
+          <label  for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+  
+          <label  for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <button  type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="principal_tarjeta">
+        <div class="tarjeta">
+          
+            <h2 id="nombre-moneda"></h2>
+            <h2 id="tipo"></h2>
+            <p id="precio-compra"></p>
+            <p id="precio-venta"></p>
+            <p id="fecha-actualizacion"></p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container_footer">
+      <div class="footer-nombres">
+        <a href="#">Tobias Anfuso</a>
+      </div>
+      <div class="footer-datos">Datos tomados desde dolarapi.com</div>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
